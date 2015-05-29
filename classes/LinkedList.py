@@ -10,7 +10,10 @@ class Node:
         self.next = None
 
     def __unicode__(self):
-        return self.value
+        return str(self.value)
+
+    def __str__(self):
+        return unicode(self).encode('utf-8')
 
 # Description: class of LinkedList
 #            : construct empty or with list or another LinkedList
